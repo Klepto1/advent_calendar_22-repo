@@ -27,7 +27,7 @@ for (i in 11:length(dt)){ # start at 11 since we 'hard coded' stacks above
   for (j in 1:quanitity){
   del <- substr(stacks[from], 1, 1) #keeping track of what we're deleting
   start <- fifelse(nchar(stacks[from]) <2 , 1, 2 ) # we start from index 2, but 1 if there is only 1
-  stacks[from] <- substring(stacks[from], start, nchar(stacks[from])) # delete and save to global
+  stacks[from] <- substr(stacks[from], start, nchar(stacks[from])) # delete and save to global
   stacks[to] <- paste(del,stacks[to], sep = "") # add what we delete to global
  }
 }
